@@ -192,7 +192,7 @@ section .title::after{
     color: purple;
     font-weight: 500;
 }
-.home .home-content a{
+.home .home-content .hireButton{
     display: inline-block;
     background: purple;
     color: #fff;
@@ -211,10 +211,15 @@ section .title::after{
 
 
 
+
+
+
+
+
 .icons-content{
     width: fit-content;
-    margin-right: 18vw;
-    margin-top: 27vh;
+    margin-left: 23vw;
+    margin-right: 10px;
 }
 
 .image{
@@ -263,7 +268,60 @@ hr {
         transform: translateY(0);
     }
 }
+/* Hidden one */
+/* .icons-content2{
+    visibility: hidden;
+    width: fit-content;
+    margin-left: 0;
+    margin-top: 25vh;
+}
 
+.image2{
+    width: 80px;
+    padding: 12px;
+    animation: float 5s ease-in-out infinite;
+    transition: 0.5s all ease;
+}
+
+.icons-wrapper2{
+    display: flex;
+    cursor: pointer;
+}
+
+hr {
+    margin-top: 0;
+    height: 2px;
+    background-color: #2d2d2d;
+    size: 10;
+    border: none;
+    height: 7px;
+    border-radius: 5px;
+}
+
+
+.instagram2{
+    animation-delay: 1s;
+}
+
+.linkedin2{
+    animation-delay: 2s;
+}
+.whatsapp2{
+    animation-delay: 3s;
+}
+
+@keyframes float2 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+        
+    }
+    100%{
+        transform: translateY(0);
+    }
+} */
 
 
 /* about section styling */
@@ -626,29 +684,29 @@ footer span a:hover{
 }
 /* responsive media query start */
 @media (max-width: 1104px) {
+    .image{
+        width: 70px;
+    }
     .about .about-content .left img{
         height: 350px;
         width: 350px;
     }
-    .image{
-        width: 80px;
-        transition: 0.5s all ease;
-    }
+
     
 }
 @media (max-width: 991px) {
+    .image{
+        width: 65px;
+    }
     .max-width{
         padding: 0 50px;
     }
-    .image{
-        width: 70px;
-        transition: 0.5s all ease;
-    }
+
 }
 @media (max-width: 947px){
+
     .image{
-        width: 65px;
-        transition: 0.5s all ease;
+        width: 60px;
     }
 
     .menu-btn{
@@ -716,11 +774,6 @@ footer span a:hover{
 }
 @media (max-width: 690px) {
 
-    .image{
-        width: 60px;
-        transition: 0.5s all ease;
-    }
-
     .max-width{
         padding: 0 23px;
     }
@@ -739,8 +792,11 @@ footer span a:hover{
 }
 @media (max-width: 500px) {
 
-    .image{
-        display: none;
+    .icons-content2{
+        visibility: visible;
+    }
+    .icons-content{
+        display: hidden;
     }
 
     .home .home-content .text-2{
