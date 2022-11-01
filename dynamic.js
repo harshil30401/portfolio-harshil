@@ -50,6 +50,8 @@ $(document).ready(function(){
 });
 
 
+
+
 // function sendMessage(){
 //     alert("Please manually send an email to ( harshilpatel30401@gmail.com ) as this feature is currently in the testing phase.")
 // }
