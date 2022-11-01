@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 html{
+    zoom:90%;
     scroll-behavior: smooth;
 }
 /* custom scroll bar */
@@ -161,7 +162,7 @@ section .title::after{
 .home{
     display: flex;
     background: url("images/banner.jpg") no-repeat center;
-    height: 100vh;
+    height: 115vh;
     color: #fff;
     min-height: 500px;
     background-size: cover;
