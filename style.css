@@ -208,6 +208,64 @@ section .title::after{
     color: purple;
     background: none;
 }
+
+
+
+.icons-content{
+    width: fit-content;
+    margin-right: 18vw;
+    margin-top: 27vh;
+}
+
+.image{
+    width: 100px;
+    padding: 12px;
+    animation: float 5s ease-in-out infinite;
+    transition: 0.5s all ease;
+}
+
+.icons-wrapper{
+    display: flex;
+    cursor: pointer;
+}
+
+hr {
+    margin-top: 0;
+    height: 2px;
+    background-color: #2d2d2d;
+    size: 10;
+    border: none;
+    height: 7px;
+    border-radius: 5px;
+}
+
+
+.instagram{
+    animation-delay: 1s;
+}
+
+.linkedin{
+    animation-delay: 2s;
+}
+.whatsapp{
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+        
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
 /* about section styling */
 
 .about .title::after{
@@ -572,13 +630,27 @@ footer span a:hover{
         height: 350px;
         width: 350px;
     }
+    .image{
+        width: 80px;
+        transition: 0.5s all ease;
+    }
+    
 }
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
     }
+    .image{
+        width: 70px;
+        transition: 0.5s all ease;
+    }
 }
 @media (max-width: 947px){
+    .image{
+        width: 65px;
+        transition: 0.5s all ease;
+    }
+
     .menu-btn{
         display: block;
         z-index: 999;
@@ -643,6 +715,12 @@ footer span a:hover{
     }
 }
 @media (max-width: 690px) {
+
+    .image{
+        width: 60px;
+        transition: 0.5s all ease;
+    }
+
     .max-width{
         padding: 0 23px;
     }
@@ -660,6 +738,11 @@ footer span a:hover{
     }
 }
 @media (max-width: 500px) {
+
+    .image{
+        display: none;
+    }
+
     .home .home-content .text-2{
         font-size: 50px;
     }
