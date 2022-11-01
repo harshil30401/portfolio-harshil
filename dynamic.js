@@ -47,32 +47,32 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
-        }
-    });
 });
 
 
-function sendMessage(){
-    alert("Please manually send an email to ( harshilpatel30401@gmail.com ) as this feature is currently in the testing phase.")
-}
+// function sendMessage(){
+//     alert("Please manually send an email to ( harshilpatel30401@gmail.com ) as this feature is currently in the testing phase.")
+// }
+
+// var submitButton = document.getElementById('submit-btn');
+// submitButton.addEventListener('click', function(e) {
+//     e.preventDefault()
+//     var sName = document.getElementById('senderName').value;
+//     var sEmail = document.getElementById('senderEmail').value;
+//     var sSubject = document.getElementById('senderSubject').value;
+//     var sMessage = document.getElementById('senderMessage').value;
+//     var r = confirm("Your Name: "+sName+"\nYour Email: "+sEmail+"\n Your Subject: "+sSubject+"\nYour Message: "+sMessage+"\n Ready to send?")
+//     if(r == true){
+//         Email.send({
+//             Host : "smtp.gmail.com",
+//             Username : "kitt30401@gmail.com",
+//             Password : "KNIGHTRIDER",
+//             To : 'harshilpatel30401@gmail.com',
+//             From : "you@isp.com",
+//             Subject : "This is the subject",
+//             Body : "And this is the body"
+//         }).then(
+//           message => alert("Message Sent!")
+//         );
+//     }
+// })

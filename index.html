@@ -294,24 +294,35 @@
                 <div class="column right">
                     <div class="text">Message me</div>
                     <!-- <form action="mailto:harshilpatel30401@gmail.com" method="post" enctype="text/plain"> -->
-                        <form action="#">
+                        <form action="https://formsubmit.co/9032a9c61cf0b165070e2eb360945eab" method="POST">
                             <div class="fields">
+                                
                                 <div class="field name">
-                                    <input type="text" placeholder="Name" required>
+                                    <input name="name" type="text" id="senderName" placeholder="Name" required>
                                 </div>
+                                
                                 <div class="field email">
-                                    <input type="email" placeholder="Email" required>
+                                    <input name="email" type="email" id="senderEmail" placeholder="Email" required>
                                 </div>
+
                             </div>
+                            
                             <div class="field">
-                                <input type="text" placeholder="Subject" required>
+                                <input type="text" name="_subject" id="senderSubject" placeholder="Subject" required>
+                                <!-- <input type="hidden" name="_subject" value="New submission!"> -->
                             </div>
+                            
                             <div class="field textarea">
-                                <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                                <textarea name="message" id="senderMessage" cols="30" rows="10" placeholder="Message.." required></textarea>
                             </div>
+                            
                             <div class="button-area">
-                                <button type="submit" onclick=sendMessage()>Send message</button>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5501/thank-you.html">
+                                <!-- value="https://harshil30401.github.io/thank-you.html" -->
+                                <button id="submit-btn" type="submit">Send message</button>
                             </div>
+
                         </form>
                 </div>
             </div>
@@ -322,5 +333,7 @@
         <span>Let’s make App Development for your business a breeze.</span>
     </footer>
     <script src="dynamic.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+</script>
 </body>
-</html>
+</html
