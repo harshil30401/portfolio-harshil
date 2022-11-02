@@ -90,7 +90,7 @@ section .title::after{
     background: purple;
 }
 .navbar .max-width{
-    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
