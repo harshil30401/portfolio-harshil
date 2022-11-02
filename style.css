@@ -236,7 +236,7 @@ section .title::after{
     cursor: pointer;
 }
 
-hr {
+.line1 {
     margin-top: 0;
     height: 2px;
     background-color: #2d2d2d;
