@@ -211,9 +211,11 @@ section .title::after{
 
 
 .icons-content{
-    margin-right: 16vw;
-    margin-top: 27vh;
+    position: relative;
+    align-self: center;
     width: fit-content;
+    margin-right: 19vw;
+    transition: 0.5s all ease;
 }
 
 .image{
@@ -631,8 +633,10 @@ footer span a:hover{
         width: 90px;
         transition: 0.5s all ease;
     }
+
 }
 @media (max-width: 991px) {
+    
     .image{
         width: 80px;
         transition: 0.5s all ease;
@@ -643,6 +647,10 @@ footer span a:hover{
     }
 }
 @media (max-width: 947px){
+    .icons-content{
+        right: 55vw;
+        top: 45vh;
+    }
     .image{
         width: 70px;
         transition: 0.5s all ease;
@@ -711,9 +719,17 @@ footer span a:hover{
     }
 }
 @media (max-width: 690px) {
+
     .image{
-        display: none;
+        position: relative;
+        width: 60px;
+
     }
+    /* .icons-content{
+        position: relative;
+        right: 55vw;
+        top: 40vh;
+    } */
     .max-width{
         padding: 0 23px;
     }
@@ -732,6 +748,8 @@ footer span a:hover{
 }
 @media (max-width: 500px) {
 
+    
+    
     .home .home-content .text-2{
         font-size: 50px;
     }
