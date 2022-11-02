@@ -424,6 +424,7 @@ hr {
     top: 0;
     background: purple;
 }
+
 .skills-content .right .html::before{
     width: 70%;
 }
@@ -662,7 +663,8 @@ footer span a:hover{
     }
 }
 @media (max-width: 947px){
-    .icons-content{
+    .mainFloating{
+        /* border: 2px solid red; */
         right: 55vw;
         top: 45vh;
         display: none;
@@ -738,16 +740,17 @@ footer span a:hover{
 @media (max-width: 690px) {
 
 
-    .icons-content{
+    /* .icons-content{
         position: relative;
         right: 50vw;
         top: 35vh;
     }
+    
 
     .max-width{
         padding: 0 23px;
         width: 100%;
-    }
+    } */
 
     .home .home-content .text-2{
         font-size: 60px;
