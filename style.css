@@ -90,6 +90,7 @@ section .title::after{
     background: purple;
 }
 .navbar .max-width{
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,6 +216,7 @@ section .title::after{
 
 
 
+
 .icons-content{
     position: relative;
     align-self: center;
@@ -267,6 +269,7 @@ hr {
         transform: translateY(0);
     }
 }
+
 
 
 
@@ -630,8 +633,68 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+
+
+
+
+
+.icons-content2{
+    position: relative;
+    visibility: hidden;
+    align-self: center;
+    width: fit-content;
+    margin-right: 19vw;
+    transition: 0.5s all ease;
+}
+
+.image2{
+    width: 70px;
+    padding: 12px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.icons-wrapper2{
+    display: flex;
+    cursor: pointer;
+}
+
+hr {
+    margin-top: 0;
+    height: 2px;
+    background-color: #2d2d2d;
+    size: 10;
+    border: none;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.instagram2{
+    animation-delay: 1s;
+}
+
+.linkedin2{
+    animation-delay: 2s;
+}
+.whatsapp2{
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+        
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 /* responsive media query start */
 @media (max-width: 1104px) {
+    
     .about .about-content .left img{
         height: 350px;
         width: 350px;
@@ -668,6 +731,9 @@ footer span a:hover{
         right: 55vw;
         top: 45vh;
         display: none;
+    }
+    .icons-content2{
+        visibility: visible;
     }
     /* Something's fishy */
     .image{   
