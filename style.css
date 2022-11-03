@@ -24,6 +24,53 @@ html{
 }
 
 
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #076378;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #07637844, 
+    0 0 50px #076378, 
+    0 0 100px #076378;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: #420b1e;
+    box-shadow: 0 0 0 10px #420b1e44, 
+    0 0 50px #420b1e, 
+    0 0 100px #420b1e;
+}
+
+@keyframes animate {
+    
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+
 
 
 
@@ -71,13 +118,15 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: purple;
+    color: #4c6793;
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
 }
 /* navbar styling */
 .navbar{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -87,7 +136,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: purple;
+    background: #4c6793;
 }
 .navbar .max-width{
 
@@ -101,9 +150,10 @@ section .title::after{
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: purple;
+    color: #4c6793;
     transition: all 0.3s ease;
 }
+
 .navbar.sticky .logo a span{
     color: #fff;
 }
@@ -120,7 +170,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: purple;
+    color: #4c6793;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -136,7 +186,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: purple;
+    background: #4c6793;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -162,7 +212,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
+    background-color: #111;
     height: 115vh;
     color: #fff;
     min-height: 500px;
@@ -180,36 +230,40 @@ section .title::after{
 }
 .home .home-content .text-1{
     font-size: 27px;
+    position: relative;
 }
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    position: relative;
+
 }
 .home .home-content .text-3{
+    position: relative;
     font-size: 40px;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: purple;
+    color: #4c6793;
     font-weight: 500;
     /* position: relative; */
     /* left: 20vw; */
 }
 .home .home-content a{
     display: inline-block;
-    background: purple;
+    background: #4c6793;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid purple;
+    border: 2px solid #4c6793;
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: purple;
+    color: #4c6793;
     background: none;
 }
 
@@ -296,31 +350,31 @@ section .title::after{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: purple;
+    color: #4c6793;
 }
 .about .about-content .right p{
     text-align: justify;
 }
 
 .iahv{
-    color: purple;
+    color: #4c6793;
 }
 
 .about .about-content .right .resumeButton{
     display: inline-block;
-    background: purple;
+    background: #4c6793;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid purple;
+    border: 2px solid #4c6793;
     transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover{
-    color: purple;
+    color: #4c6793;
     background: none;
 }
 /* services section styling */
@@ -348,7 +402,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
-    background: purple;
+    background: #4c6793;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -358,7 +412,7 @@ section .title::after{
 }
 .services .serv-content .card i{
     font-size: 50px;
-    color: purple;
+    color: #4c6793;
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
@@ -386,18 +440,18 @@ section .title::after{
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: purple;
+    background: #4c6793;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid purple;
+    border: 2px solid #4c6793;
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: purple;
+    color: #4c6793;
     background: none;
 }
 .skills .skills-content .right .bars{
@@ -425,7 +479,7 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: purple;
+    background: #4c6793;
 }
 
 .skills-content .right .html::before{
@@ -474,7 +528,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
-    background: purple;
+    background: #4c6793;
 }
 .teams .carousel .card .box{
     display: flex;
@@ -496,7 +550,7 @@ section .title::after{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid purple;
+    border: 5px solid #4c6793;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
@@ -512,7 +566,7 @@ section .title::after{
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid purple!important;
+    border: 2px solid #4c6793!important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -521,7 +575,7 @@ section .title::after{
 }
 .owl-dot.active,
 .owl-dot:hover{
-    background: purple!important;
+    background: #4c6793!important;
 }
 /* contact section styling */
 .contact .title::after{
@@ -551,7 +605,7 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: purple;
+    color: #4c6793;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
@@ -610,12 +664,12 @@ section .title::after{
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: purple;
-  border: 2px solid purple;
+  background: #4c6793;
+  border: 2px solid #4c6793;
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: purple;
+  color: #4c6793;
   background: none;
 }
 /* footer section styling */
@@ -626,7 +680,7 @@ footer{
     text-align: center;
 }
 footer span a{
-    color: purple;
+    color: #4c6793;
     text-decoration: none;
 }
 footer span a:hover{
@@ -693,6 +747,16 @@ footer span a:hover{
 }
 
 /* responsive media query start */
+
+
+/* @media () {
+    .navbar{
+        box-shadow: 5px 5px 15px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+} */
+
 @media (max-width: 1104px) {
     
     .about .about-content .left img{
@@ -726,6 +790,13 @@ footer span a:hover{
     }
 }
 @media (max-width: 947px){
+    .bubbles span{
+        position: relative;
+        width: 10px;
+        height: 10px;
+        animation-duration: calc(200s / var(--i));
+    }
+
     .mainFloating{
         /* border: 2px solid red; */
         right: 55vw;
