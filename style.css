@@ -596,7 +596,7 @@ section .title::after{
     box-sizing: border-box;
     animation: float 5s ease-in-out infinite;
 }
-.projBox:hover .projContent{
+.projContainer:hover .projContent{
     animation: none;
     height: 100%;
     width: 100%;
