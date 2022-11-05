@@ -587,6 +587,16 @@ section .title::after{
     bottom: 0;
     opacity: 1;
 }
+/* .projBox:active .projContent{
+    animation: none;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+} */
+
+
 
 .projBox .projContent h3{
     margin: 0;
@@ -612,10 +622,10 @@ section .title::after{
     opacity: 1;
     transition-delay: 0.4s;
 }
-.projBox:active .projContent p{
+/* .projBox:active .projContent p{
     opacity: 1;
     transition-delay: 0.4s;
-}
+} */
 
 .projBox:hover .projContent h3{
     font-size: 20px;
@@ -623,12 +633,12 @@ section .title::after{
     margin-bottom: 20px;
     text-align: left;
 }
-.projBox:active .projContent h3{
+/* .projBox:active .projContent h3{
     font-size: 20px;
     color: black;
     margin-bottom: 20px;
     text-align: left;
-}
+} */
 
 
 /* teams section styling */
