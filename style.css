@@ -6,6 +6,8 @@
     text-decoration: none;
 }
 html{
+    overflow: scroll;
+    overflow-x: hidden;
     zoom:90%;
     scroll-behavior: smooth;
 }
@@ -520,14 +522,26 @@ section .title::after{
 }
 
 /* Projects section stying */
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    height: 5px;
+    background: transparent;
+  }
+
 .projects .title::after{
     content: "academics";
 }
 .projects-content{
     background: radial-gradient(#4c6793, white, #4c6793);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-family: Poppins;
     overflow-x: scroll;
+    /* overflow: hidden; */
     display: flex;
 }
 .projContainer{
@@ -540,6 +554,7 @@ section .title::after{
 
 .projBox{
     /* border-radius: 10px; */
+    /* animation: slideshow 20s linear infinite; */
     position: relative;
     width: 300px;
     height: 400px;
@@ -635,12 +650,56 @@ section .title::after{
     margin-bottom: 20px;
     text-align: left;
 }
+
 /* .projBox:active .projContent h3{
     font-size: 20px;
     color: black;
     margin-bottom: 20px;
     text-align: left;
 } */
+
+#swipeHint{
+    margin-top: 9px;
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    /* 4c6793 */
+    background: linear-gradient(90deg, #fff, #4c6793);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: slide 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* @keyframes slideshow {
+    0%    { left: 0; }
+    50%  { left: -200%; }
+    100% {left: 0;}
+} */
+
+@keyframes slide {
+    0%{
+        background-position: -500%;
+    }
+    50%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 500%;
+    }
+    
+}
+
+
+
+
+
 
 
 /* teams section styling */
@@ -1044,9 +1103,13 @@ footer span a:hover{
     .services .serv-content .card{
         width: 100%;
     }
+    #swipeHint{
+        font-size: larger;
+    }
 
 }
 @media (max-width: 500px) {
+
 
     .home .home-content .text-2{
         font-size: 50px;
