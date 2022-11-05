@@ -524,6 +524,8 @@ section .title::after{
     content: "academics";
 }
 .projects-content{
+    background: radial-gradient(#4c6793, white, #4c6793);
+    border-radius: 10px;
     font-family: Poppins;
     overflow-x: scroll;
     display: flex;
