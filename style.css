@@ -1,3 +1,5 @@
+/* 4c6793 */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 *{
     margin: 0;
@@ -534,9 +536,12 @@ section .title::after{
   }
 
 .projects .title::after{
-    content: "academics";
+    content: "hands-on";
 }
 .projects-content{
+    border-radius: 3px;
+    box-shadow: 5px 5px 12px 3px #4c6793;
+                
     background: radial-gradient(#4c6793, white, #4c6793);
     /* border-radius: 10px; */
     font-family: Poppins;
@@ -604,22 +609,20 @@ section .title::after{
     bottom: 0;
     opacity: 1;
 }
-/* .projBox:active .projContent{
-    animation: none;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    opacity: 1;
-} */
 
+.reduceFontSize{
+    position: absolute;
+    left: 0;
+    bottom: 10;
+    /* text-align: center; */
+}
 
 
 .projBox .projContent h3{
     margin: 0;
     color:white;
     /* padding-bottom: 20px; */
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     transition: 0.5s all ease;
 }
@@ -645,6 +648,7 @@ section .title::after{
 } */
 
 .projBox:hover .projContent h3{
+    position: relative;
     font-size: 20px;
     color: black;
     margin-bottom: 20px;
