@@ -216,7 +216,8 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background-color: #111;
+    /* background: linear-gradient(#131922, white); */
+    background-color: #141a28;
     height: 115vh;
     color: #fff;
     min-height: 500px;
@@ -338,6 +339,10 @@ section .title::after{
 
 }
 
+/* .iahv{
+    color: red;
+} */
+
 .about .title::after{
     content: "who i am";
 }
@@ -427,13 +432,19 @@ section .title::after{
     color: #4c6793;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.services .serv-content .card:hover i, .card:hover .text{
     color: #fff;
 }
+
+/* .services .serv-content .card:hover .text{
+    color:rgb(0, 0, 0)
+} */
+
 .services .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    transition: color 0.3s ease;
 }
 /* skills section styling */
 .skills .title::after{
