@@ -333,6 +333,11 @@ section .title::after{
 
 /* about section styling */
 
+.column p a{
+    text-decoration: underline #4c6793;
+
+}
+
 .about .title::after{
     content: "who i am";
 }
