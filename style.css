@@ -121,6 +121,7 @@ html{
 }
 
 .client{
+    top: 20;
     border-bottom: 2px solid gray;
     width: 400px;
     position: fixed;
@@ -1305,7 +1306,7 @@ footer span a:hover{
         content: "\f00d";
     }
     .navbar .menu{
-        position: fixed;
+        position: absolute;
         height: 100vh;
         width: 100%;
         left: -100%;
