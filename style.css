@@ -106,14 +106,14 @@ html{
 
 
 .chat-box{
-    top: 100;
+    top: 150;
     overflow-y: scroll;
     right: 20;
     position: fixed;
     z-index: 9;
     width: 400px;
     /* height: 450px; */
-    height: 400px;
+    height: 350px;
     background-color: rgb(30, 30, 30);        
     /* background-color: #1f2939; */
     /* overflow: scroll; */
@@ -121,7 +121,7 @@ html{
 }
 
 .client{
-    top: 20;
+    top: 70;
     border-bottom: 2px solid gray;
     width: 400px;
     position: fixed;
