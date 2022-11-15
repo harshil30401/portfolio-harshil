@@ -1363,14 +1363,6 @@ footer span a:hover{
 @media (max-width: 690px) {
 
 
-    .chat-btn{
-        display: none;
-    }
-    .chat-container{
-        display: none;
-    }
-
-
     /* .icons-content{
         position: relative;
         right: 50vw;
@@ -1402,8 +1394,26 @@ footer span a:hover{
         font-size: larger;
     }
 
+    .chat-btn{
+        left: 50vw;
+    }
+    #myScreen{
+        left: 20vw;
+    }
+
+    .send-btn{
+        transform: rotate(-90deg);
+    }
 }
 @media (max-width: 500px) {
+
+
+    .chat-btn{
+        display: none;
+    }
+    .chat-container{
+        display: none;
+    }
 
 
     .home .home-content .text-2{
