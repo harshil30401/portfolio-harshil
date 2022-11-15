@@ -49,6 +49,69 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(()=>{
+    $(".chat-btn").click(()=>{
+        $(".chat-box").slideToggle("easing")
+    })
+})
+
+botTrigger = document.getElementById('chatTrigger')
+botTrigger.Click()
+
+
+var subButton = document.getElementById('send-button');
+
+subButton.onclick = function(){
+    getUserResponse();
+}
+
+// subButton.addEventListener('click', getUserResponse, false);
+
+function returnsUserMessage(){
+    var userResponse = document.getElementById('input-chat').value;
+    console.log(userResponse)
+    if (userResponse == "") {
+        return null;
+    }else{
+        return userResponse;
+    }
+}
+
+
+function getUserResponse(){
+        
+    let div = document.createElement("div")
+    div.className = "user-chat";
+    div.innerHTML = returnsUserMessage();
+    if (div.innerHTML == 1) {
+        // div.innerHTML = "You cannot write this" //Do nothing
+        null
+    }
+    var chatWindow = document.getElementById('chatWindow');
+    chatWindow.appendChild(div);
+
+    var myScreen = document.getElementById('myScreen');
+    myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
