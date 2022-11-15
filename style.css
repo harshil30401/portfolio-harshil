@@ -257,7 +257,7 @@ html{
 
 .chat-btn{
 
-    animation: shine 1.5s infinite;
+    animation: shine 2s infinite;
     border: 2px solid gray;
     z-index: 9999;
     /* box-shadow: 5px 5px 10px #4c6793; */
@@ -282,12 +282,15 @@ html{
 @keyframes shine {
     0%{
         opacity: 1;
+        box-shadow: 0px 0px 10px white;
     }
     50%{
         opacity: 0.8;
+        box-shadow: 0px 0px 20px white;
     }
     100%{
         opacity: 1;
+        box-shadow: 0px 0px 10px white;
     }
     /* 75%{
         opacity: 0.5;
@@ -1363,6 +1366,13 @@ footer span a:hover{
 }
 @media (max-width: 690px) {
 
+    .chat-btn{
+        display: none;
+    }
+    .chat-container{
+        display: none;
+    }
+
 
     /* .icons-content{
         position: relative;
@@ -1395,7 +1405,7 @@ footer span a:hover{
         font-size: larger;
     }
 
-    .chat-btn{
+    /* .chat-btn{
         left: 50vw;
     }
     #myScreen{
@@ -1404,17 +1414,9 @@ footer span a:hover{
 
     .send-btn{
         transform: rotate(-90deg);
-    }
+    } */
 }
 @media (max-width: 500px) {
-
-
-    .chat-btn{
-        display: none;
-    }
-    .chat-container{
-        display: none;
-    }
 
 
     .home .home-content .text-2{
