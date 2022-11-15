@@ -106,7 +106,7 @@ html{
 
 
 .chat-box{
-    top: 175;
+    top: 225;
     overflow-y: scroll;
     right: 20;
     position: fixed;
@@ -121,7 +121,7 @@ html{
 }
 
 .client{
-    top: 70;
+    top: 145;
     border-bottom: 2px solid gray;
     width: 400px;
     position: fixed;
@@ -264,7 +264,7 @@ html{
     box-shadow: 1px 1px 20px 1px gray;
     transition: 0.4s ease;
     /* animation: float 3s infinite; */
-    left: 92vw;
+    left: 94vw;
     padding: 10px;
     width: 70px;
     height: 70px;
