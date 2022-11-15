@@ -114,6 +114,7 @@
             </div>
             <div class="chatbot">
                 <!-- chatbot section -->
+                
                 <div class="chat-container">
                     <div class="chat-box" id="myScreen">
 
@@ -129,8 +130,6 @@
                         <div class="chats" id="chatWindow">
                             <div class="client-chat">Hi I am KITT, Harshil's AI powered chatbot, I am currently under the testing phase.</div>
                             
-                            
-                            
                             <div class="client-chat">Hi I am KITT, Harshil's AI powered chatbot.</div>
                             <div class="client-chat">I cannot reply to you yet as I am still under the testing phase.</div>
                             <!-- <div class="user-chat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime tempora natus ipsam dignissimos libero, quia architecto recusandae possimus velit adipisci minus fugit omnis perspiciatis beatae voluptatem numquam cumque nostrum?</div>
@@ -138,8 +137,8 @@
                         </div>
 
                         <div class="chat-input">
-                            <input type="text" id="input-chat" placeholder="Enter a message...">
-                            <button class="send-btn" id="send-button">
+                            <input type="text" id="input-chat" placeholder="Enter a message..." autofocus>
+                            <button class="send-btn" id="send-button" onclick="getUserResponse()">
                                 <!-- <i class="fas fa-paint-brush"></i> -->
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
@@ -147,12 +146,17 @@
 
                     </div>
                 </div>
-                <div class="chat-btn" id="chatTrigger">
+                
+                <div class="chat-btn" id="chatTrigger" onclick="showHide('myScreen')">
                     <img src="images/robot.png" alt="chat box">
                 </div>
+
             </div>
         </section>
     </div>
+
+
+
 
     <!-- about section start -->
     <section class="about" id="about">

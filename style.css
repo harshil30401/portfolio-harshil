@@ -100,6 +100,10 @@ html{
     align-items: center;
 }
 
+#myScreen{
+    display: none;
+}
+
 
 .chat-box{
     top: 100;
@@ -252,7 +256,8 @@ html{
 
 .chat-btn{
 
-    opacity: 0.7;
+    animation: shine 1.5s infinite;
+    border: 2px solid gray;
     z-index: 9999;
     /* box-shadow: 5px 5px 10px #4c6793; */
     box-shadow: 1px 1px 20px 1px gray;
@@ -262,7 +267,7 @@ html{
     padding: 10px;
     width: 70px;
     height: 70px;
-    /* background-color: rgb(0, 0, 0); */
+    background-color: gray;
     /* background: radial-gradient(#4c6793, white); */
     border-radius: 50%;
     cursor: pointer;
@@ -272,6 +277,25 @@ html{
     /* margin: 10px; */
 
 }
+
+@keyframes shine {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+    /* 75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    } */
+}
+
 @keyframes zoomInOut {
     
     0%{

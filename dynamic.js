@@ -49,43 +49,47 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(()=>{
-    $(".chat-btn").click(()=>{
-        $(".chat-box").slideToggle("easing")
-    })
-})
+// $(document).ready(()=>{
+//     $(".chat-btn").click(()=>{
+//         $(".chat-box").slideToggle("easing")
+//     })
+// });
 
-botTrigger = document.getElementById('chatTrigger')
-botTrigger.Click()
+function showHide(id) {
 
+    var el = document.getElementById(id);
+    if( el && el.style.display == 'block'){    
+        el.style.display = 'none';
+    }
+    else{ 
+        el.style.display = 'block';
 
-var subButton = document.getElementById('send-button');
-
-subButton.onclick = function(){
-    getUserResponse();
+    }
 }
 
-// subButton.addEventListener('click', getUserResponse, false);
+// subButton.onclick = function(){
+//     getUserResponse();
+// }
 
 function returnsUserMessage(){
     var userResponse = document.getElementById('input-chat').value;
     console.log(userResponse)
-    if (userResponse == "") {
-        return null;
-    }else{
-        return userResponse;
-    }
+    // if (userResponse == "") {
+    //     return null;
+    // }else{
+    //     return userResponse;
+    // }
+    return userResponse;
 }
 
-
 function getUserResponse(){
-        
+
     let div = document.createElement("div")
     div.className = "user-chat";
     div.innerHTML = returnsUserMessage();
     if (div.innerHTML == 1) {
         // div.innerHTML = "You cannot write this" //Do nothing
-        null
+        null;
     }
     var chatWindow = document.getElementById('chatWindow');
     chatWindow.appendChild(div);
@@ -94,8 +98,6 @@ function getUserResponse(){
     myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
 
 }
-
-
 
 
 
