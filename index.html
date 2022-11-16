@@ -116,6 +116,19 @@
             
                 <!-- chatbot section -->
                 <div class="chat-container">
+                    
+
+                    <!-- Tooltip -->
+                    <div class="tooltip" id="tooltip">
+                        <div class="message-box">Hi I am KITT, Harshil's AI powered ChatBot. I am still under the testing phase and I'll be available soon!</div>
+                        <div class="arrow">
+
+                        </div>
+                        <div class="close" id="close">x</div>
+                    </div>
+
+
+
                     <div class="chat-box" id="myScreen">
 
                         <div class="client">
@@ -145,7 +158,8 @@
                     </div>
                 </div>
                 
-                <div class="chat-btn" id="chatTrigger" onclick="showHide('myScreen')">
+                <div class="chat-btn" id="chatTrigger" onclick="showHide('tooltip')" >
+                    <!-- onclick="showHide('myScreen')"> -->
                     <img src="images/robot.png" alt="chat box">
                 </div>
 
@@ -540,7 +554,6 @@
 
     <!-- footer section start -->
     <footer>
-
         <span>Let’s make App Development for your business a breeze.</span>
     </footer>
     <script src="dynamic.js"></script>

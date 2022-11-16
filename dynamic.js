@@ -47,7 +47,33 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
+
+    // var robo = document.getElementById('chatTrigger')
+    // robo.onclick = function () {
+    //     var el = document.getElementById('tooltip');
+    //     if( el && el.style.display == 'block'){    
+    //         el.style.display = 'none';
+    //         var typed = new Typed(".message-box", {
+    //             strings: [],
+    //             typeSpeed: 50,
+    //             // backSpeed: 50,
+    //             loop: false
+    //         });
+
+    //     }
+    //     else{ 
+    //         el.style.display = 'block';
+    //         var typed = new Typed(".message-box", {
+    //             strings: ["Hi I am KITT, I am Harshil's AI powered chatbot, I am currently under the testing phase and will soon be available!"],
+    //             typeSpeed: 50,
+    //             // backSpeed: 50,
+    //             loop: false
+    //         });
+    //     }
+    // }
+
 });
+
 
 // $(document).ready(()=>{
 //     $(".chat-btn").click(()=>{
@@ -64,12 +90,14 @@ function showHide(id) {
     else{ 
         el.style.display = 'block';
 
+        var robo = document.getElementById('chatTrigger')
+
     }
 }
 
-// subButton.onclick = function(){
-//     getUserResponse();
-// }
+document.getElementById('close').onclick = function () {
+    showHide('tooltip')
+}
 
 function returnsUserMessage(){
     var userResponse = document.getElementById('input-chat').value;
