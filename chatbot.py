@@ -79,14 +79,14 @@ def chat(user_response):
         if(user_response == 'thanks' or user_response == 'thank you'):
             flag = False
             print(" KITT: You're most welcome :)")
-            pass
+            # pass
         elif (('not tell' or 'not say' or 'not send') in user_response):
             print("KITT: Okay, i won't")
-            pass
+            # pass
 
         elif (('your name' or 'who are you' or 'your identity') in user_response):
             print('KITT: My name is KITT, i\'m a ChatBot')
-            pass        
+            # pass        
 
         else:
             if(greeting(user_response) != None):
@@ -95,7 +95,7 @@ def chat(user_response):
                 print("KITT: ",end="")
                 print(response(user_response))
                 sent_tokens.remove(user_response)
-            pass
+            # pass
     else:
         flag = False
         print("KITT: Have a great day!")
