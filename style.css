@@ -254,7 +254,6 @@ html{
     height: 100%;
 }
 
-
 .chat-btn{
 
     animation: shine 2s infinite;
@@ -577,14 +576,14 @@ section .title::after{
 }
 
 .instagram{
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 
 .linkedin{
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 .whatsapp{
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes float {
