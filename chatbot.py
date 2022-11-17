@@ -2,15 +2,10 @@ import random, string, warnings, nltk
 from googlesearch import search
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-# from nltk.stem import WordNetLemmatizer
 
 warnings.filterwarnings('ignore')
 
-# from nltk.stem import WordNetLemmatizer
 nltk.download('popular', quiet=True)
-
-# from google.colab import drive
-# drive.mount('/content/drive')
 
 file = r'C:\Users\DELL\Desktop\portfolio-harshil\training\bot.txt'
 
@@ -30,14 +25,6 @@ remove_punc_dict = dict((ord(punc), None) for punc in string.punctuation)
 def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punc_dict)))
 
-GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up", "hey")
-GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I'm glad you're talking to me"]
-
-def greeting(sentence):
-    for word in sentence.split():
-        if (word.lower() in GREETING_INPUTS):
-            return random.choice(GREETING_RESPONSES)
-
 def search_online(user_response):
     query = str(user_response)
 
@@ -54,87 +41,55 @@ def response(user_response):
     flat = vals.flatten()
     flat.sort()
     req_tfidf = flat[-2]
-    if(req_tfidf == 0):
-        print("Sorry, i don't understand, do you want me to do a web search?")
-        web_search = input("Type Yes/No: ")
-        web_search.lower()
-        if (web_search == 'yes'):
-            print("KITT: Here are the top 5 resuts from google: \n")
-            return search_online(user_response)                       
 
-        elif (web_search == 'no'):
-            robo_response = ("KITT: Okay")
+    GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up", "hey")
+    GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I'm glad you're talking to me"]
+    for word in user_response.split():
+        if (word.lower() in GREETING_INPUTS):
+            return random.choice(GREETING_RESPONSES)
+
+
+
+    if(req_tfidf == 0):
+        robo_response = [
+            
+            "Sorry, I have not been trained to answer that yet!", 
+            "Sorry, I cannot answer to that, you can reach out to Harshil at harshilpatel30401@gmail.com",
+            "I cannot answer to that yet!"
+            ]
+        return random.choice(robo_response)
+        # web_search = input("Type Yes/No: ")
+        # web_search.lower()
+        # if (web_search == 'yes'):
+        #     print("Here are the top 5 resuts from google: \n")
+        #     return search_online(user_response)                       
+
+        # elif (web_search == 'no'):
+        #     robo_response = ("Okay")
+        #     return robo_response
+
+    if (user_response == 'thanks' or user_response == 'thank you'):
+            robo_response = ("You're most welcome :)")
+            return robo_response
+            
+    elif (('not' or 'not tell' or 'not say' or 'not send') in user_response):
+            robo_response = ("No problem!")
             return robo_response
 
-        else:
-            robo_response = ("KITT: Not a valid response!")
+    elif (('your name' or 'who are you' or 'your identity') in user_response):
+            robo_response = ('My name is KITT, I\'m Harshil\'s AI powered ChatBot. I can help you know more about Harshil')
+            return robo_response
+
+    elif (('siri') in user_response):
+            robo_response = ("That's like comparing apples and...not apples")
+            return robo_response
+
+    elif (('siri' or 'assistant' or 'alexa') in user_response):
+            robo_response = ("I offer no resistance to helpful assistants.")
             return robo_response
 
     else:
         robo_response = robo_response+sent_tokens[idx]
         return robo_response
 
-def chat(user_response):
-    if(user_response != 'bye'):
-        if(user_response == 'thanks' or user_response == 'thank you'):
-            flag = False
-            print(" KITT: You're most welcome :)")
-            # pass
-        elif (('not tell' or 'not say' or 'not send') in user_response):
-            print("KITT: Okay, i won't")
-            # pass
-
-        elif (('your name' or 'who are you' or 'your identity') in user_response):
-            print('KITT: My name is KITT, i\'m a ChatBot')
-            # pass        
-
-        else:
-            if(greeting(user_response) != None):
-                print("KITT: "+greeting(user_response))
-            else:
-                print("KITT: ",end="")
-                print(response(user_response))
-                sent_tokens.remove(user_response)
-            # pass
-    else:
-        flag = False
-        print("KITT: Have a great day!")
-
-def main():
-    flag = True
-
-    print("Hello i'm KITT, how can i help you?")
-
-    while(flag == True):
-        user_response = input("You: ")   #The javascript function goes here
-        user_response = user_response.lower()
-        if(user_response != 'bye'):
-            if(user_response == 'thanks' or user_response == 'thank you'):
-                flag = False
-                print(" KITT: You're most welcome :)")
-                pass
-            elif (('not' or 'not tell' or 'not say' or 'not send') in user_response):
-                print("KITT: Okay, i won't")
-                pass
-
-            elif (('your name' or 'who are you' or 'your identity') in user_response):
-                print('KITT: My name is KITT, I\'m an AI powered ChatBot')
-                pass
-
-            else:
-                if(greeting(user_response) != None):
-                    print("KITT: "+greeting(user_response))
-                else:
-                    print("KITT: ",end="")
-                    print(response(user_response))
-                    sent_tokens.remove(user_response)
-                pass
-        else:
-            flag = False
-            print("KITT: Have a great day!")
-
-try:
-    main()
-except KeyboardInterrupt:
-    print("Type bye to deactivate me")
-    main()
+print(response(""))

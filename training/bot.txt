@@ -1,9 +1,1 @@
-Harshil Patel is an IT Engineer who pursued his Bachelor of Engineering in Information Technology from
-Shah and Anchor Kutchhi Engineering College with a cgpa of 8.05, he is an ambitious person who has developed a mature
-and responsible approach to any task that is assigned to him. His Final Year Project was on ‘Analysis and
-Prediction of Air Quality Index in India’ in Python and Machine Learning. He has worked on a major
-internship project on Watershed Management for The Art of Living Foundation. He has also worked on
-many projects namely Smart Heart Rate Monitoring System, Diabetes Prediction and Car Rental
-Management throughout the course and Amazon Bot as a personal project. He has become more
-confident and developed management, communication and problem-solving skills. He has also learned
-the importance of applying a strategic approach to modern-day projects.
+Harshil is an IT Engineer who pursued his Engineering from Shah and Anchor Kutchhi Engineering College with a CGPA was 8.05. He completed his HSC from Mithibai College with a percentage 78.15%. Harshil completed his schooling from Holy Family High School with a percentage of 87.80%. Harshil likes to play Football and Badminton. Harshil is seeking for job opportunities for a Developer / Analyst, in case your organization has new openings then reach out to him at harshilpatel30401@gmail.com or ping him. His projects include Smart Heart rate Monitoring System, Amazon Price Notifier and Diabetes Prediction please view the My Projects section for more projects and info.    
