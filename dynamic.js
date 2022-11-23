@@ -110,11 +110,13 @@ function returnsUserMessage(){
     return userResponse;
 }
 
+
 function getUserResponse(){
 
     let div = document.createElement("div")
     div.className = "user-chat";
-    div.innerHTML = returnsUserMessage();
+    userMessage = returnsUserMessage();
+    div.innerHTML = userMessage;
     if (div.innerHTML == 1) {
         // div.innerHTML = "You cannot write this" //Do nothing
         null;
@@ -125,6 +127,20 @@ function getUserResponse(){
     var myScreen = document.getElementById('myScreen');
     myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
 
+    //Posting message to Python
+
+    const userMessage = returnsUserMessage();
+
+    console.log(firstname);
+
+    const request = new XMLHttpRequest()
+    request.open('POST', `/processUserInfo/${JSON.stringify(firstname)}`)
+    request.send();
+
+}
+function sendToPython(){
+    var userMessage = returnsUserMessage();
+    
 }
 
 

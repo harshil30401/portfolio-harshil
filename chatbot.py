@@ -80,7 +80,7 @@ def response(user_response):
             robo_response = ('My name is KITT, I\'m Harshil\'s AI powered ChatBot. I can help you know more about Harshil')
             return robo_response
 
-    elif (('siri') in user_response):
+    elif (('siri' and 'better') in user_response):
             robo_response = ("That's like comparing apples and...not apples")
             return robo_response
 
@@ -92,4 +92,6 @@ def response(user_response):
         robo_response = robo_response+sent_tokens[idx]
         return robo_response
 
-print(response(""))
+kitt_response = response("WHat is machine learning branch?")
+
+print(kitt_response)
