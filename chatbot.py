@@ -52,10 +52,9 @@ def response(user_response):
 
     if(req_tfidf == 0):
         robo_response = [
-            
             "Sorry, I have not been trained to answer that yet!", 
             "Sorry, I cannot answer to that, you can reach out to Harshil at harshilpatel30401@gmail.com",
-            "I cannot answer to that yet!"
+            "Please download the enclosed resume for a more in-depth illustration of Harshil's projects, experiences and accomplishments."
             ]
         return random.choice(robo_response)
         # web_search = input("Type Yes/No: ")
@@ -92,6 +91,6 @@ def response(user_response):
         robo_response = robo_response+sent_tokens[idx]
         return robo_response
 
-kitt_response = response("WHat is machine learning branch?")
+kitt_response = response("Who is Harshil?")
 
 print(kitt_response)
