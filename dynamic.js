@@ -90,7 +90,7 @@ function showHide(id) {
     else{ 
         el.style.display = 'block';
 
-        var robo = document.getElementById('chatTrigger')
+        document.getElementById('chatTrigger')
 
     }
 }
@@ -103,9 +103,7 @@ function returnsUserMessage(){
     var userResponse = document.getElementById('input-chat').value;
     console.log(userResponse)
     // if (userResponse == "") {
-    //     return null;
-    // }else{
-    //     return userResponse;
+    //     userResponse = null;
     // }
     return userResponse;
 }
@@ -115,16 +113,15 @@ function getUserResponse(){
     let div = document.createElement("div")
     div.className = "user-chat";
     div.innerHTML = returnsUserMessage();
-    if (div.innerHTML == 1) {
-        // div.innerHTML = "You cannot write this" //Do nothing
-        null;
+    if (div.innerHTML != ""){
+        var chatWindow = document.getElementById('chatWindow');
+        chatWindow.appendChild(div);
+
+        var myScreen = document.getElementById('myScreen');
+        myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
+
+        document.getElementById('input-chat').value = ''
     }
-    var chatWindow = document.getElementById('chatWindow');
-    chatWindow.appendChild(div);
-
-    var myScreen = document.getElementById('myScreen');
-    myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
-
 }
 
 
