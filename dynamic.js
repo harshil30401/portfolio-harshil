@@ -120,7 +120,7 @@ function getUserResponse(){
         var myScreen = document.getElementById('myScreen');
         myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
 
-        document.getElementById('input-chat').value = ''
+        document.getElementById('input-chat').value = '';
     }
 }
 
