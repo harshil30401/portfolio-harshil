@@ -76,6 +76,10 @@ html{
 
 
 /* Chatbot */
+/* form{
+    display: flex;
+} */
+
 #online{
     display: block;
 }

@@ -89,9 +89,6 @@ function showHide(id) {
     }
     else{ 
         el.style.display = 'block';
-
-        var robo = document.getElementById('chatTrigger')
-
     }
 }
 
@@ -103,9 +100,7 @@ function returnsUserMessage(){
     var userResponse = document.getElementById('input-chat').value;
     console.log(userResponse)
     // if (userResponse == "") {
-    //     return null;
-    // }else{
-    //     return userResponse;
+    //     userResponse = null;
     // }
     return userResponse;
 }
@@ -113,9 +108,10 @@ function returnsUserMessage(){
 
 function getUserResponse(){
 
+    let userMessage = returnsUserMessage();
+
     let div = document.createElement("div")
     div.className = "user-chat";
-    userMessage = returnsUserMessage();
     div.innerHTML = userMessage;
     if (div.innerHTML == 1) {
         // div.innerHTML = "You cannot write this" //Do nothing
@@ -127,20 +123,19 @@ function getUserResponse(){
     var myScreen = document.getElementById('myScreen');
     myScreen.scrollTop = myScreen.scrollHeight - myScreen.clientHeight;
 
-    //Posting message to Python
+    document.getElementById('input-chat').value = ''
 
-    const userMessage = returnsUserMessage();
 
-    console.log(firstname);
+    //Sending the message to python
+    userMessage = encodeURIComponent(userMessage)
 
+    console.log(userMessage);
     const request = new XMLHttpRequest()
-    request.open('POST', `/processUserInfo/${JSON.stringify(firstname)}`)
-    request.send();
+    request.open('POST', `/ProcessUserinfo/${JSON.stringify(userMessage)}`)
+    request.send()
 
-}
-function sendToPython(){
-    var userMessage = returnsUserMessage();
-    
+
+
 }
 
 
