@@ -13,7 +13,7 @@ nltk.download('popular', quiet=True)
 # from google.colab import drive
 # drive.mount('/content/drive')
 
-file = r'C:\Users\DELL\Desktop\Testing\training\bot.txt'
+file = r"C:\Users\DELL\Desktop\portfolio-harshil\static\training\bot.txt"
 
 f = open(file, 'r', errors='ignore')
 raw = f.read()
@@ -92,7 +92,7 @@ def response(user_response):
         robo_response = robo_response+sent_tokens[idx]
         return robo_response
 
-def main(user_response):
+def botResponse(user_response):
 
     user_response = user_response.lower()
     user_response = dropSpecialChars(user_response)
@@ -123,13 +123,7 @@ def main(user_response):
         robo_response = ("Have a great day!")
         return robo_response
 
-
-
-
-
-
-
-
+print(botResponse("Who is harshil?"))
 
 
 

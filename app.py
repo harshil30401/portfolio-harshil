@@ -1,20 +1,25 @@
-from flask import Flask, render_template, request, redirect
-from chatbot import main
-import json
+from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__,)
 
-@app.route('/')
-def index():
+from chatbot import botResponse
+
+@app.route("/")
+def main():
     return render_template('index.html')
 
-@app.route('/ProcessUserinfo/<string:userMessage>', methods=['GET','POST'])
-def ProcessUserinfo(userMessage):
-    userMessage = json.loads(userMessage)
-    print()
-    print(main(userMessage))
-    print()
-    return('/')
+@app.route("/get")
+def get_bot_response():
+
+    userMessage = request.args.get('userMessage')   #requesting input value as an argument
+    
+    print("-"*100)
+    print("user-message: "+userMessage)
+    processedOutput = botResponse(userMessage)
+    print("bot-response: "+processedOutput)
+    print("-"*100)
+
+    return str(processedOutput)
 
 if __name__ == "__main__":
     app.run(debug=True)
