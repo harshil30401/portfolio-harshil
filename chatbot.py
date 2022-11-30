@@ -123,7 +123,6 @@ def botResponse(user_response):
         robo_response = ("Have a great day!")
         return robo_response
 
-print(botResponse("Who is harshil?"))
 
 
 
