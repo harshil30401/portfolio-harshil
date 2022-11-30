@@ -92,7 +92,7 @@ def response(user_response):
         robo_response = robo_response+sent_tokens[idx]
         return robo_response
 
-kitt_response = response("")
+kitt_response = response("Hi KITT")
 
 print(kitt_response)
 
