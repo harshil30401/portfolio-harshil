@@ -1224,6 +1224,50 @@ footer span a:hover{
 
 
 
+/* Submit Button For Sending Mail */
+/* #submit-btn{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    background-color: purple;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s;
+    border-radius: .5s;
+}
+#submit-btn span{
+    font-size: 12px;
+}
+
+#submit-btn *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+i{
+    opacity: 0;
+}
+#submit-btn:focus{
+    width: 30px;
+    background-color: purple;
+    border-radius: 50%;
+}
+#submit-btn:focus .text{
+    opacity: 0;
+}
+
+#submit-btn:focus i{
+    opacity: 1;
+    transition-delay: .5s;
+} */
+
+
+
 
 
 
