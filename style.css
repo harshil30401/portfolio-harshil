@@ -13,6 +13,7 @@ html{
     zoom:90%;
     scroll-behavior: smooth;
 }
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -402,6 +403,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
+
 .about, .services, .skills, .teams, .contact, footer, .thank{
     font-family: 'Poppins', sans-serif;
 }
@@ -717,9 +719,9 @@ section .title::after{
 .teams .title::before{
     background: #222;
 }
-.serv-content{
+/* .serv-content{
     padding-top: 100px;
-}
+} */
 .services .title::after,
 .teams .title::after{
     background: #fff;
@@ -825,7 +827,7 @@ section .title::after{
     width: 70%;
 }
 .skills-content .right .css::before{
-    width: 40%;
+    width: 50%;
 }
 .skills-content .right .js::before{
     width: 50%;

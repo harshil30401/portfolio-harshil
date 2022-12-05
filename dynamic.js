@@ -125,15 +125,63 @@ function getUserResponse(){
 }
 
 
+//ScrollTrigger for about
+let tl = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.about-content',
+        start: "top bottom"
+    }
+});
 
+tl
+// .from(".aboutTitle",{z:200, opacity:0, duration:0.2})
+.from(".aboutLeft",{x:-200, opacity:0, duration:1})
+.from(".aboutRight", {x:200, opacity:0, duration:1}, "-=1") 
+// Offset: Start 1s earlier by you would normally would
 
+let t2 = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.servicesBaby',
+        start: "top bottom",
+    }
+});
 
+t2
+.from(".servicesBaby",{x:200, opacity:0, duration:1})
 
+let t3 = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.skills-content',
+        start: "top bottom",
+    }
+});
 
+t3
+// .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
+.from(".skillsLeft",{x:-200, opacity:0, duration:1})
+.from(".skillsRight", {x:200, opacity:0, duration:1}, "-=1") 
 
+let t4 = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.contact',
+        start: "top bottom",
+    }
+});
 
+t4
+// .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
+.from(".contactLeft",{x:-200, opacity:0, duration:1})
+.from(".contactRight", {x:200, opacity:0, duration:1}, "-=1") 
 
+let t5 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".projects",
+        start: "top bottom"
+    }
+});
 
+t5
+.from(".projects-content", {x:-200, opacity:0, duration:1})
 
 
 
