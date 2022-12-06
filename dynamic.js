@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Developer.","Designer.", "Freelancer."],
+        strings: ["Designer.","Developer.", "Freelancer."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -147,7 +147,7 @@ let t2 = gsap.timeline({
 });
 
 t2
-.from(".servicesBaby",{x:25, opacity:0, duration:1})
+.from(".servicesBaby" ,{y:25, opacity:0, duration:1})
 
 let t3 = gsap.timeline({
     scrollTrigger:{
@@ -159,7 +159,7 @@ let t3 = gsap.timeline({
 t3
 // .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
 .from(".skillsLeft",{x:-25, opacity:0, duration:1})
-.from(".skillsRight", {x:25, opacity:0, duration:1}, "-=1") 
+.from(".skillsRight", {y:25, opacity:0, duration:1}, "-=1") 
 
 let t4 = gsap.timeline({
     scrollTrigger:{
@@ -181,7 +181,63 @@ let t5 = gsap.timeline({
 });
 
 t5
-.from(".projects-content", {x:-25, opacity:0, duration:1})
+.from(".projContainer", {y:-25, opacity:0, duration:1, stagger:0.3, ease:"bounce"})
+
+
+let bot = gsap.timeline({
+    scrollTrigger:{
+        trigger:".chatbot",
+        start:"top bottom"
+    }
+});
+
+
+
+let socialMedia = gsap.timeline()
+socialMedia
+.from(".icons-wrapper", 
+// {x:200, duration:2},
+{y:-100, duration:3,  ease:"bounce"}
+)
+
+
+// Home content
+gsap.from(".text-1", {duration:1, x:-50, opacity:0});
+gsap.from(".text-2", {duration:1, x:50, opacity:0, delay:0.5});
+gsap.from(".text-3", {duration:1, opacity:0, delay:1});
+gsap.from(".hireMe", {duration:1, opacity:0});
+
+gsap.from(".line1", {
+    y:200,
+    skewY:45,
+    opacity:0,
+    duration:1
+})
+
+gsap.from(".menu li", {
+    y:25,
+    opacity:0,
+    duration:1,
+    stagger:0.3
+});
+
+gsap.from(".logo",{
+    y:25,
+    duration:2,
+    opacity:0,
+    rotate:-45
+});
+
+
+
+
+
+
+
+
+
+// .from(".chat-btn", {x:225, duration:1})
+// .to(".chat-btn", {x:-10, rotate:-360, duration:5, ease:"bounce"})
 
 
 // Moving cursor

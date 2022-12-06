@@ -655,18 +655,19 @@ section .title::after{
 }
 
 .instagram{
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .linkedin{
-    animation-delay: 3s;
+    animation-delay: 5s;
 }
 .whatsapp{
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 @keyframes float {
     0%{
+        /* animation-delay: 5s; */
         transform: translateY(0);
     }
     50%{
