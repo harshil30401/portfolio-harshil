@@ -166,6 +166,126 @@ function getUserResponse(){
 
 }
 
+//ScrollTrigger for about
+let tl = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.about-content',
+        start: "top bottom"
+    }
+});
+
+tl
+// .from(".aboutTitle",{z:200, opacity:0, duration:0.2})
+.from(".aboutLeft",{x:-25, opacity:0, duration:1})
+.from(".aboutRight", {x:25, opacity:0, duration:1}, "-=1") 
+// Offset: Start 1s earlier by you would normally would
+
+let t2 = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.servicesBaby',
+        start: "top bottom",
+    }
+});
+
+t2
+.from(".servicesBaby" ,{y:25, opacity:0, duration:1})
+
+let t3 = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.skills-content',
+        start: "top bottom",
+    }
+});
+
+t3
+// .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
+.from(".skillsLeft",{x:-25, opacity:0, duration:1})
+.from(".skillsRight", {y:25, opacity:0, duration:1}, "-=1") 
+
+let t4 = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.contact',
+        start: "top bottom",
+    }
+});
+
+t4
+// .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
+.from(".contactLeft",{x:-25, opacity:0, duration:1})
+.from(".contactRight", {x:25, opacity:0, duration:1}, "-=1") 
+
+let t5 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".projects",
+        start: "top bottom"
+    }
+});
+
+t5
+.from(".projContainer", {y:-25, opacity:0, duration:1, stagger:0.3, ease:"bounce"})
+
+
+let bot = gsap.timeline({
+    scrollTrigger:{
+        trigger:".chatbot",
+        start:"top bottom"
+    }
+});
+
+
+
+let socialMedia = gsap.timeline()
+socialMedia
+.from(".icons-wrapper", 
+// {x:200, duration:2},
+{y:-100, duration:3,  ease:"bounce"}
+)
+
+
+// Home content
+gsap.from(".text-1", {duration:1, x:-50, opacity:0});
+gsap.from(".text-2", {duration:1, x:50, opacity:0, delay:0.5});
+gsap.from(".text-3", {duration:1, opacity:0, delay:1});
+gsap.from(".hireMe", {duration:1, opacity:0});
+
+gsap.from(".line1", {
+    y:200,
+    skewY:45,
+    opacity:0,
+    duration:1
+})
+
+gsap.from(".menu li", {
+    y:25,
+    opacity:0,
+    duration:1,
+    stagger:0.3
+});
+
+gsap.from(".logo",{
+    y:25,
+    duration:2,
+    opacity:0,
+    rotate:-45
+});
+
+gsap.from(".fa-bars", {
+    opacity:0,
+    y:-50,
+    ease:"power3",
+    duration:2
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
