@@ -566,7 +566,9 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    /* background: linear-gradient(#131922, white); */
+    /* background: linear-gradient(90deg,
+        rgb(0 0 0 / 0.8), rgb(0 0 0 / 0)
+    ); */
     background-color: #141a28;
     height: 115vh;
     color: #fff;
@@ -705,7 +707,9 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
+
 }
+
 .about .about-content .right{
     width: 55%;
 }
@@ -742,6 +746,15 @@ section .title::after{
     color: #4c6793;
     background: none;
 }
+.resumeButton >span> img{
+    width: 25px;
+    margin-left: 10px;
+}
+
+
+
+
+
 /* services section styling */
 .services, .teams{
     color:#222;
@@ -917,6 +930,7 @@ section .title::after{
     display: flex;
 }
 .projContainer{
+    cursor: pointer;
     padding: 16px;
     width: 1000px;
     display: flex;

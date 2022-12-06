@@ -126,6 +126,10 @@ function getUserResponse(){
 
 
 //ScrollTrigger for about
+
+// gsap.registerPlugin(ScrollTrigger);
+
+
 let tl = gsap.timeline({
     scrollTrigger:{
         trigger: '.about-content',
@@ -135,7 +139,8 @@ let tl = gsap.timeline({
 
 tl
 // .from(".aboutTitle",{z:200, opacity:0, duration:0.2})
-.from(".aboutLeft",{x:-25, opacity:0, duration:1})
+.from(".aboutLeft",{x:-25, opacity:0, duration:1, filter:"blur(7px)"})
+.to(".aboutLeft", {filter:"drop-shadow(2px 12px 12px black)", delay:0.5})
 .from(".aboutRight", {x:25, opacity:0, duration:1}, "-=1") 
 // Offset: Start 1s earlier by you would normally would
 
@@ -181,7 +186,7 @@ let t5 = gsap.timeline({
 });
 
 t5
-.from(".projContainer", {y:-25, opacity:0, duration:1, stagger:0.3, ease:"bounce"})
+.from(".projects-content", {y:50, opacity:0, duration:1, stagger:0.3})
 
 
 let bot = gsap.timeline({
@@ -234,9 +239,6 @@ gsap.from(".fa-bars", {
     ease:"power3",
     duration:2
 })
-
-
-
 
 
 
