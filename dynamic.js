@@ -135,8 +135,8 @@ let tl = gsap.timeline({
 
 tl
 // .from(".aboutTitle",{z:200, opacity:0, duration:0.2})
-.from(".aboutLeft",{x:-200, opacity:0, duration:1})
-.from(".aboutRight", {x:200, opacity:0, duration:1}, "-=1") 
+.from(".aboutLeft",{x:-25, opacity:0, duration:1})
+.from(".aboutRight", {x:25, opacity:0, duration:1}, "-=1") 
 // Offset: Start 1s earlier by you would normally would
 
 let t2 = gsap.timeline({
@@ -147,7 +147,7 @@ let t2 = gsap.timeline({
 });
 
 t2
-.from(".servicesBaby",{x:200, opacity:0, duration:1})
+.from(".servicesBaby",{x:25, opacity:0, duration:1})
 
 let t3 = gsap.timeline({
     scrollTrigger:{
@@ -158,8 +158,8 @@ let t3 = gsap.timeline({
 
 t3
 // .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
-.from(".skillsLeft",{x:-200, opacity:0, duration:1})
-.from(".skillsRight", {x:200, opacity:0, duration:1}, "-=1") 
+.from(".skillsLeft",{x:-25, opacity:0, duration:1})
+.from(".skillsRight", {x:25, opacity:0, duration:1}, "-=1") 
 
 let t4 = gsap.timeline({
     scrollTrigger:{
@@ -170,8 +170,8 @@ let t4 = gsap.timeline({
 
 t4
 // .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
-.from(".contactLeft",{x:-200, opacity:0, duration:1})
-.from(".contactRight", {x:200, opacity:0, duration:1}, "-=1") 
+.from(".contactLeft",{x:-25, opacity:0, duration:1})
+.from(".contactRight", {x:25, opacity:0, duration:1}, "-=1") 
 
 let t5 = gsap.timeline({
     scrollTrigger:{
@@ -181,7 +181,7 @@ let t5 = gsap.timeline({
 });
 
 t5
-.from(".projects-content", {x:-200, opacity:0, duration:1})
+.from(".projects-content", {x:-25, opacity:0, duration:1})
 
 
 
