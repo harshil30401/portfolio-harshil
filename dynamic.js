@@ -135,8 +135,8 @@ let tl = gsap.timeline({
 
 tl
 // .from(".aboutTitle",{z:200, opacity:0, duration:0.2})
-.from(".aboutLeft",{x:-200, opacity:0, duration:1})
-.from(".aboutRight", {x:200, opacity:0, duration:1}, "-=1") 
+.from(".aboutLeft",{x:-25, opacity:0, duration:1})
+.from(".aboutRight", {x:25, opacity:0, duration:1}, "-=1") 
 // Offset: Start 1s earlier by you would normally would
 
 let t2 = gsap.timeline({
@@ -147,7 +147,7 @@ let t2 = gsap.timeline({
 });
 
 t2
-.from(".servicesBaby",{x:200, opacity:0, duration:1})
+.from(".servicesBaby",{x:25, opacity:0, duration:1})
 
 let t3 = gsap.timeline({
     scrollTrigger:{
@@ -158,8 +158,8 @@ let t3 = gsap.timeline({
 
 t3
 // .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
-.from(".skillsLeft",{x:-200, opacity:0, duration:1})
-.from(".skillsRight", {x:200, opacity:0, duration:1}, "-=1") 
+.from(".skillsLeft",{x:-25, opacity:0, duration:1})
+.from(".skillsRight", {x:25, opacity:0, duration:1}, "-=1") 
 
 let t4 = gsap.timeline({
     scrollTrigger:{
@@ -170,8 +170,8 @@ let t4 = gsap.timeline({
 
 t4
 // .from(".skillsTitle",{z:200, opacity:0, duration:0.2})
-.from(".contactLeft",{x:-200, opacity:0, duration:1})
-.from(".contactRight", {x:200, opacity:0, duration:1}, "-=1") 
+.from(".contactLeft",{x:-25, opacity:0, duration:1})
+.from(".contactRight", {x:25, opacity:0, duration:1}, "-=1") 
 
 let t5 = gsap.timeline({
     scrollTrigger:{
@@ -181,9 +181,183 @@ let t5 = gsap.timeline({
 });
 
 t5
-.from(".projects-content", {x:-200, opacity:0, duration:1})
+.from(".projects-content", {x:-25, opacity:0, duration:1})
 
 
+// Moving cursor
+
+// gsap.set(".ball", {xPercent: 150, yPercent: 150});
+
+//     const ball = document.querySelector(".ball");
+//     const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+//     const mouse = { x: pos.x, y: pos.y };
+//     const speed = 0.2;
+
+//     const xSet = gsap.quickSetter(ball, "x", "px");
+//     const ySet = gsap.quickSetter(ball, "y", "px");
+
+//     window.addEventListener("mousemove", e => {    
+//     mouse.x = e.x;
+//     mouse.y = e.y;  
+//     });
+
+//     gsap.ticker.add(() => {
+    
+//     // adjust speed for higher refresh monitors
+//     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio()); 
+    
+//     pos.x += (mouse.x - pos.x) * dt;
+//     pos.y += (mouse.y - pos.y) * dt;
+//     xSet(pos.x);
+//     ySet(pos.y);
+//     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Send Message Button
+
+// document.querySelectorAll(".button").forEach((button) => {
+//     let getVar = (variable) =>
+//         getComputedStyle(button).getPropertyValue(variable);
+
+//     button.addEventListener("click", (e) => {
+//         if (!button.classList.contains("active")) {
+//         button.classList.add("active");
+
+//         gsap.to(button, {
+//             keyframes: [
+//             {
+//                 "--left-wing-first-x": 50,
+//                 "--left-wing-first-y": 100,
+//                 "--right-wing-second-x": 50,
+//                 "--right-wing-second-y": 100,
+//                 duration: 0.2,
+//                 onComplete() {
+//                 gsap.set(button, {
+//                     "--left-wing-first-y": 0,
+//                     "--left-wing-second-x": 40,
+//                     "--left-wing-second-y": 100,
+//                     "--left-wing-third-x": 0,
+//                     "--left-wing-third-y": 100,
+//                     "--left-body-third-x": 40,
+//                     "--right-wing-first-x": 50,
+//                     "--right-wing-first-y": 0,
+//                     "--right-wing-second-x": 60,
+//                     "--right-wing-second-y": 100,
+//                     "--right-wing-third-x": 100,
+//                     "--right-wing-third-y": 100,
+//                     "--right-body-third-x": 60,
+//                 });
+//                 },
+//             },
+//             {
+//                 "--left-wing-third-x": 20,
+//                 "--left-wing-third-y": 90,
+//                 "--left-wing-second-y": 90,
+//                 "--left-body-third-y": 90,
+//                 "--right-wing-third-x": 80,
+//                 "--right-wing-third-y": 90,
+//                 "--right-body-third-y": 90,
+//                 "--right-wing-second-y": 90,
+//                 duration: 0.2,
+//             },
+//             {
+//                 "--rotate": 50,
+//                 "--left-wing-third-x": 27,
+//                 "--left-wing-third-y": 95,
+//                 "--right-body-third-x": 45,
+//                 "--right-wing-second-x": 45,
+//                 "--right-wing-third-x": 60,
+//                 "--right-wing-third-y": 83,
+//                 duration: 0.25,
+//             },
+//             {
+//                 "--rotate": 55,
+//                 "--plane-x": -8,
+//                 "--plane-y": 24,
+//                 duration: 0.2,
+//             },
+//             {
+//                 "--rotate": 40,
+//                 "--plane-x": 45,
+//                 "--plane-y": -180,
+//                 "--plane-opacity": 0,
+//                 duration: 0.3,
+//                 onComplete() {
+//                 setTimeout(() => {
+//                     button.removeAttribute("style");
+//                     gsap.fromTo(
+//                     button,
+//                     {
+//                         opacity: 0,
+//                         y: -8,
+//                     },
+//                     {
+//                         opacity: 1,
+//                         y: 0,
+//                         clearProps: true,
+//                         duration: 0.3,
+//                         onComplete() {
+//                         button.classList.remove("active");
+//                         },
+//                     }
+//                     );
+//                 }, 2000);
+//                 },
+//             },
+//             ],
+//         });
+
+//         gsap.to(button, {
+//             keyframes: [
+//             {
+//                 "--text-opacity": 0,
+//                 "--border-radius": 0,
+//                 "--left-wing-background": getVar("--primary-darkest"),
+//                 "--right-wing-background": getVar("--primary-darkest"),
+//                 duration: 0.1,
+//             },
+//             {
+//                 "--left-wing-background": getVar("--primary"),
+//                 "--right-wing-background": getVar("--primary"),
+//                 duration: 0.1,
+//             },
+//             {
+//                 "--left-wing-background": getVar("--primary-dark"),
+//                 "--right-wing-background": getVar("--primary-dark"),
+//                 duration: 0.4,
+//             },
+//             {
+//                 "--success-opacity": 1,
+//                 "--success-scale": 1,
+//                 duration: 0.25,
+//                 delay: 0.25,
+//             },
+//             ],
+//         });
+//         }
+//     });
+//     });
 
 
 
