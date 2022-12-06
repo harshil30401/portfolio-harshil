@@ -228,6 +228,14 @@ gsap.from(".logo",{
     rotate:-45
 });
 
+gsap.from(".fa-bars", {
+    opacity:0,
+    y:-50,
+    ease:"power3",
+    duration:2
+})
+
+
 
 
 

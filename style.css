@@ -70,6 +70,7 @@ html{
 .bubbles{
     position: relative;
     display: flex;
+    border-radius: 50%;
 }
 
 .bubbles span{
