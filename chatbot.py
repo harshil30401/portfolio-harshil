@@ -1,6 +1,6 @@
 import random, string, warnings, nltk
 
-from googlesearch import search
+# from googlesearch import search
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 # from nltk.stem import WordNetLemmatizer
@@ -39,11 +39,11 @@ def greeting(sentence):
         if (word.lower() in GREETING_INPUTS):
             return random.choice(GREETING_RESPONSES)
 
-def search_online(user_response):
-    query = str(user_response)
+# def search_online(user_response):
+#     query = str(user_response)
 
-    for j in search(query, num_results=5):
-        print(j)
+#     for j in search(query, num_results=5):
+#         print(j)
 
 def dropSpecialChars(user_response):
     final_string = ""
