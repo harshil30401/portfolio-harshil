@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="url_for('static', filename='style.css')">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 </head>
 
 <body>
@@ -101,13 +102,13 @@
             <div class="icons-content mainFloating">
                 <div class="icons-wrapper">
                     <a class="floatingIcons" href="tel:+918879482450" target="_blank">
-                        <img src="{{ url_for('static', filename='images/logos/phone.png')}}" alt="Failed to load image!" class="whatsapp image">
+                        <img src="../static/images/logos/phone.png" alt="Failed to load image!" class="whatsapp image">
                     </a>
                     <a class="floatingIcons" href="https://leetcode.com/harshil30401/" target="_blank">
-                        <img src="{{ url_for('static', filename='images/logos/leetcode.png')}}" alt="Failed to load image!" class="instagram image">
+                        <img src="../static/images/logos/leetcode.png" alt="Failed to load image!" class="instagram image">
                     </a>
                     <a class="floatingIcons" href="https://www.linkedin.com/in/harshil-patel-53baa6202" target="_blank">
-                        <img src="{{ url_for('static', filename='images/logos/linkedin.png')}}" alt="Failed to load image!" class="linkedin image">
+                        <img src="../static/images/logos/linkedin.png" alt="Failed to load image!" class="linkedin image">
                     </a>
                 </div>
                 <hr class="line1">
@@ -132,7 +133,7 @@
                     <div class="chat-box" id="myScreen">
 
                         <div class="client">
-                            <img src="{{ url_for('static', filename='images/robot.png')}}" alt="logo">
+                            <img src="../static/images/robot.png" alt="logo">
                             <div class="client-info">
                                 <h2>KITT</h2>
                                 <!-- <p id="offline" style="color: red;">offline</p> -->
@@ -163,7 +164,7 @@
                 
                 <div class="chat-btn" id="chatTrigger" onclick="showHide('myScreen')" >
                     <!-- onclick="showHide('tooltip')"> -->
-                    <img src="{{ url_for('static', filename='images/robot.png')}}" alt="chat box">
+                    <img src="../static/images/robot.png" alt="chat box">
                 </div>
 
             </div>
@@ -179,7 +180,7 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="{{ url_for('static', filename='images/profile.JPG')}}" alt="">
+                    <img src="../static/images/profile.JPG" alt="">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Harshil and I'm a <span class="typing-2"></span></div>
@@ -194,7 +195,7 @@
                         Learning, ‘Real-time Chat Application’ using HTML, CSS, JavaScript, PHP and 'Car Rental
                         Management System' throughout the course and ‘Amazon price notifier’ in Python as a personal
                         project.</p>
-                    <a class="resumeButton" href="{{ url_for('static', filename='documents/Resume.pdf')}}" download>Download CV</a>
+                    <a class="resumeButton" href="../static/documents/Harshil's Resume.pdf" download>Download CV</a>
                 </div>
             </div>
         </div>
@@ -320,7 +321,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/amazon.jpg')}}" alt="">
+                            <img src="../static/images/projects/amazon.jpg" alt="">
                         </div>
                         <div class="projContent">
                             <h3>Amazon Price Notifier</h3>
@@ -334,7 +335,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/healthMonitoring.jpg')}}" alt="">
+                            <img src="../static/images/projects/healthMonitoring.jpg" alt="">
                         </div>
                         <div class="projContent">
                             <h3 class="reduceFontSize">Smart Health Monitoring System</h3>
@@ -350,7 +351,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/chatApplication.jpg')}}" alt="">
+                            <img src="../static/images/projects/chatApplication.jpg" alt="">
                         </div>
                         <div class="projContent">
                             <h3>Chat Application</h3>
@@ -365,7 +366,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/diabetesPrediction.jpg')}}" alt="">
+                            <img src="../static/images/projects/diabetesPrediction.jpg" alt="">
                         </div>
                         <div class="projContent">
                             <h3>Diabetes Prediction</h3>
@@ -380,7 +381,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/ATM.webp')}}" alt="">
+                            <img src="../static/images/projects/ATM.webp" alt="">
                         </div>
                         <div class="projContent">
                             <h3>ATM Interface</h3>
@@ -394,7 +395,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/carRentalManagement.jpg')}}" alt="">
+                            <img src="../static/images/projects/carRentalManagement.jpg" alt="">
                         </div>
                         <div class="projContent">
                             <h3 class="reduceFontSize">Car Rental Management System</h3>
@@ -410,7 +411,7 @@
                 <div class="projContainer">
                     <div class="projBox">
                         <div class="imgBx">
-                            <img src="{{ url_for('static', filename='images/projects/chatBot.jpg')}}" alt="">
+                            <img src="../static/images/projects/chatBot.jpg" alt="">
                         </div>
                         <div class="projContent">
                             <h3>ChatBot</h3>
@@ -540,13 +541,13 @@
                 <div class="icons-content2">
                     <div class="icons-wrapper2 bottomFloating">
                         <a href="https://leetcode.com/harshil30401/" target="_blank">
-                            <img src="{{ url_for('static', filename='images/logos/leetcode.png')}}" alt="Failed to load image!" class="instagram2 image2">
+                            <img src="../static/images/logos/leetcode.png" alt="Failed to load image!" class="instagram2 image2">
                         </a>
                         <a href="https://www.linkedin.com/in/harshil-patel-53baa6202" target="_blank">
-                            <img src="{{ url_for('static', filename='images/logos/linkedin.png')}}" alt="Failed to load image!" class="linkedin2 image2">
+                            <img src="../static/images/logos/linkedin.png" alt="Failed to load image!" class="linkedin2 image2">
                         </a>
                         <a href="tel:+918879482450" target="_blank">
-                            <img src="{{ url_for('static', filename='images/logos/phone.png')}}" alt="Failed to load image!" class="whatsapp2 image2">
+                            <img src="../static/images/logos/phone.png" alt="Failed to load image!" class="whatsapp2 image2">
                         </a>
                     </div>
                     <hr class="hr2">
@@ -559,7 +560,7 @@
     <footer>
         <span>Let’s make App Development for your business a breeze.</span>
     </footer>
-    <script src="{{ url_for('static', filename='dynamic.js')}}"></script>
+    <script src="../static/dynamic.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>

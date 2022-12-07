@@ -13,7 +13,7 @@ nltk.download('popular', quiet=True)
 # from google.colab import drive
 # drive.mount('/content/drive')
 
-file = r"C:\Users\DELL\Desktop\portfolio-harshil\static\training\bot.txt"
+file = r"../static/training/bot.txt"
 
 f = open(file, 'r', errors='ignore')
 raw = f.read()
