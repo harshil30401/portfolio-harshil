@@ -1314,6 +1314,10 @@ footer span a:hover{
 
 }
 @media (max-width: 991px) {
+
+    .chat-btn{
+        display: none;
+    }
     
     /* .image{
         width: 80px;
