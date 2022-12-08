@@ -276,8 +276,20 @@ gsap.from(".fa-bars", {
     duration:2
 })
 
+// gsap.fromTo(".tooltip", {
+//     opacity:0
+// },{
+//     delay:5,
+//     opacity:1
+// })
 
+gsap.to(".tooltip", {
 
+    opacity:0,
+    delay:12,
+    y:15,
+    duration:1
+})
 
 
 
